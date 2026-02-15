@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://host.docker.internal:3306/viajes
+    username: root
+    password: 2064
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}

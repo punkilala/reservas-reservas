@@ -32,8 +32,8 @@ public class ReservaServiceImpl implements ReservaService{
 	@Override
 	public List<ReservaResponseDto> allReservas() {
 		List<ReservaEntity> reservasBdd = reservaRepository.findAll();
-
-		return reservaMapper.toReservasDto(reservasBdd);
+		List<ReservaResponseDto> resultDto = reservaMapper.toReservasDto(reservasBdd);
+		return resultDto;
 	}
 
 	@Override
